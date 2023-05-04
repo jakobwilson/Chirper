@@ -45,13 +45,14 @@ const App = () => {
         </form>
         <h2 className='container mt-2 border-bottom text-info fw-bold'>Chirper Feed</h2>
         <div>
-            <main className='container border rounded bg-info-subtle p-3'>
+            {mergeData.length > 0 && <main className='container border rounded bg-info-subtle p-3'>
                 
             {mergeData.map(chirp => {
-                return <p>{chirp.username} {chirp.chirp}</p>
+                return <li >{chirp.username} {chirp.chirp}</li>
+                
                 
             })}
-            </main>
+            </main>}
         </div>
       
             
